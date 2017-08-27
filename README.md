@@ -5,3 +5,9 @@
 **User Story:** If it does, it returns both the Unix timestamp and the natural language form of that date.
 
 **User Story:** If it does not contain a date or Unix timestamp, it returns null for those properties.
+
+**Example usage:**
+https://regal-mist.glitch.me/December%2025,%202017
+https://regal-mist.glitch.me/1450137600
+Example output:
+{ "unix": 1450137600, "natural": "December 15, 2015" }

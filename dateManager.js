@@ -1,6 +1,6 @@
-var dateManager = module.exports = {
-   processDate(givenDate){
-    
+exports.processDate = function (givenDate) {
+  console.log("Made it to the manager");
+
     // Converting date from a String to a Date format
     var parsedDate = parseDate(givenDate);
     
@@ -16,7 +16,7 @@ var dateManager = module.exports = {
       return( {'unix' : null, 'natural': null} );
     
     }   
-}
+
 };
 
 function parseDate(dateStr) {

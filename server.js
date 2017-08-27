@@ -8,7 +8,7 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
-var dateManager = require('dateManager');
+var dateManager = require('./dateManager');
 
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
@@ -39,9 +39,9 @@ app.route('/')
 		  res.sendFile(process.cwd() + '/views/index.html');
     })
 
-
+//Add route for date parameter and call to ProcessDate function
 app.get('/:date', function(req, res) {
-  res.send(dateManager(req.params.date));
+  res.send(dateManager.processDate(req.params.date));
   res.end();
 });
 
