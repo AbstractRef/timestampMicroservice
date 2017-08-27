@@ -1,7 +1,6 @@
 exports.processDate = function (givenDate) {
   console.log("Made it to the manager");
 
-    // Converting date from a String to a Date format
     var parsedDate = parseDate(givenDate);
     
     if (parsedDate) {
